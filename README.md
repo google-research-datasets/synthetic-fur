@@ -16,17 +16,20 @@ raytraced fur renders. We believe that this dataset can contribute to the
 computer graphics and machine learning community to develop more advanced
 techniques with fur rendering.
 
-For a quick overview of the dataset, see the galleries of images contained within the dataset:
+For a quick overview of the dataset, see the galleries of images contained
+within the dataset:
 
-- [Sphere](https://photos.app.goo.gl/JcRmKfjjqb7Kuwdz5)
-- [Torus]([https://photos.app.goo.gl/FJD3dC9RTt8jcBGg8)
-- [Bunny](https://photos.app.goo.gl/3CkwRjWtZzpp5FTL7)
+-   [Sphere](https://photos.app.goo.gl/JcRmKfjjqb7Kuwdz5)
+-   [Torus](https://photos.app.goo.gl/FJD3dC9RTt8jcBGg8)
+-   [Bunny](https://photos.app.goo.gl/3CkwRjWtZzpp5FTL7)
 
 ## Download
 
-The dataset is hosted on Google Cloud Storage. It's available for both [browsing](https://pantheon.corp.google.com/storage/browser/magentadata/datasets/synthetic_fur/release?project=brain-magenta) (Google
-account required) and download. The dataset are divded into images (~21.01 GiB,
-with 18GB of training and 3GB of holdout set), and simulation files.
+The dataset is hosted on Google Cloud Storage. It's available for both
+[browsing](https://pantheon.corp.google.com/storage/browser/magentadata/datasets/synthetic_fur/release?project=brain-magenta)
+(Google account required) and download. The dataset are divded into images
+(~21.01 GiB, with 18GB of training and 3GB of holdout set), and simulation
+files.
 
 We recommend to download the images separately from the simulation files. To get
 started, you can download a subset of scenes instead, such as scene 1 - 4, so
