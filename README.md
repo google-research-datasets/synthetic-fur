@@ -1,6 +1,11 @@
-# SyntheticFur Dataset
+## SyntheticFur Dataset
 
 [Paper]()
+
+[<img src="images/dataset/bunny_gt.gif" alt="bunny_1" width = "512"/>](https://youtu.be/FNOddH3DXUk)
+
+[Video](https://youtu.be/FNOddH3DXUk) showing all the ground truth frames of
+every scene.
 
 ## Overview
 
@@ -51,11 +56,6 @@ will copy only the images in the dataset.
 
 ## What's in this?
 
-[<img src="images/dataset/bunny_gt.gif" alt="bunny_1" width = "512"/>](https://youtu.be/FNOddH3DXUk)
-
-[Video](https://youtu.be/FNOddH3DXUk) showing all the ground truth frames of
-every scene.
-
 The dataset contains ~140,000 images and 15 [Alembic]((https://www.alembic.io/)
 files generated from scratch using Houdini and Zync.
 
@@ -71,9 +71,7 @@ files generated from scratch using Houdini and Zync.
     <img src="images/dataset/bunny_1.png" alt="bunny_1" width = "128"/>
     <img src="images/dataset/bunny_GuideColored_1.png" alt="bunny_LitPrimitive_1" width = "128"/>
     <img src="images/dataset/bunny_LitPrimitve_1.png" alt="bunny_LitPrimitive_1" width = "128"/>
-    <img src="images/dataset/bunny_Rasterized_1.png" alt="bunny_Rasterized_1" width = "128"/>
     <img src="images/dataset/bunny_SceneDepth_1.png" alt="bunny_SceneDepth_1" width = "128"/>
-    <img src="images/dataset/bunny_WorldNormal_1.png" alt="bunny_WorldNormal_1" width = "128"/>
 </p>
 
 The dataset has the following definitions:
@@ -85,7 +83,7 @@ The dataset has the following definitions:
 -   *Frame*: each frame is a set of conditional images that represents the
     ground truth and the input images.
 
-### Data Structure
+## Data Structure
 
 #### Images
 
