@@ -4,7 +4,7 @@
 
 [<img src="images/dataset/bunny_gt.gif" alt="bunny_1" width = "512"/>](https://youtu.be/FNOddH3DXUk)
 
-[Video](https://youtu.be/FNOddH3DXUk) showing all the ground truth frames of
+[Video](https://youtu.be/5uraQu_5Tyg) showing all the ground truth frames of
 every scene.
 
 ## Overview
@@ -62,7 +62,6 @@ files generated from scratch using Houdini and Zync.
 <p float="left">
     <img src="images/dataset/sphere_3.png" alt="sphere_1" width = "128"/>
     <img src="images/dataset/sphere_hdri_capehill.png" alt="sphere_hdri_capehill" width = "128"/>
-    <img src="images/dataset/sphere_brown_1.png" alt="sphere_brown_1" width = "128"/>
     <img src="images/dataset/tube_2.png" alt="tube_2" width = "128"/>
     <img src="images/dataset/torus_2.png" alt="torus_2" width = "128"/>
     <img src="images/dataset/torus_3.png" alt="torus_3" width = "128"/>
@@ -301,11 +300,10 @@ Scene # | Scene Name                                                | Short Desc
 19      | `tube_3Lights_rotateRight`                                | Tube rotates along right vector                                   | Light rig                                         | White    | Position: `[0, 0, 0]`; Rotation: `[0, 0, $F]`
 20      | `bunny_3Lights_static`                                    | Bunny static                                                      | Light rig                                         | White    | Position: `[0, 0, 0]`
 21      | `bunny_3Lights_rotateUp`                                  | Bunny rotates along up vector                                     | Light rig                                         | White    | Position: `[0, 0, 0]`; Rotation: `[0, $F, 0]`
-22      | `sphere_curly_clumpLarge_brown_3Lights_moveRL`            | (\*) Sphere moves right, left                                     | Light rig                                         | Brown    | Position: `[0, 0, sin($F)]`
-23      | `torus_curly_clumpLarge_brown_3Lights_static60`           | Torus static, tilted at 60 degree angle                           | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[0, 0, 60]`
-24      | `torus_curly_clumpLarge_brown_3Lights_rotateUp`           | Torus rotates along up vector                                     | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F, 0, 90]`; Uniform Scale: `0.5`
-25      | `torus_curly_clumpLarge_brown_3Lights_rotateRightForward` | Torus rotate along right and forward vectors                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F/3, 0, $F]`; Uniform Scale: `0.5`
-26      | `bunny_curly_clumpLarge_brown_3Lights_static`             | Bunny static                                                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`
+22      | `torus_curly_clumpLarge_brown_3Lights_static60`           | Torus static, tilted at 60 degree angle                           | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[0, 0, 60]`
+23      | `torus_curly_clumpLarge_brown_3Lights_rotateUp`           | Torus rotates along up vector                                     | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F, 0, 90]`; Uniform Scale: `0.5`
+24      | `torus_curly_clumpLarge_brown_3Lights_rotateRightForward` | Torus rotate along right and forward vectors                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F/3, 0, $F]`; Uniform Scale: `0.5`
+25      | `bunny_curly_clumpLarge_brown_3Lights_static`             | Bunny static                                                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`
 
 (\* 4/27/2021): we recently discovered an issue from frame 410-720 that contains
 unstable simulation of fur. We advise avoiding using those frames.
@@ -314,11 +312,11 @@ unstable simulation of fur. We advise avoiding using those frames.
 
 Scene # | Scene Name                    | Short Description                 | Light Type                          | Fur Type | Skin Primitive Motion
 :------ | :---------------------------- | :-------------------------------: | :---------------------------------: | :------: | :-------------------:
-27      | `bunny_hdriCapeHill_static`   | Bunny static                      | Cape Hill HDRI light intensity = 2  | White    | Position: `[0, 0, 0]`
-28      | `bunny_hdriHansaplatz_static` | Bunny static                      | Hansaplatz HDRI light intensity = 1 | White    | Position: `[0, 0, 0]`
-29      | `sphere_3Lights_moveDiag`     | Sphere moves diagonally           | Light rig                           | White    | Position: `[0, sin($F), sin($F)]`
-30      | `rubbertoy_3Lights_rotateUp`  | Rubbertoy rotates along up vector | Light rig                           | White    | Position: `[0, 0, 0]`; Rotation: `[0, $F, 0]`
-31      | `box_3Lights_rotateXYZ`       | Box rotates all 3 directions      | Light rig                           | White    | Position: `[0, 0, 0]`; Rotation: `[$F, $F, $F]`
+26      | `bunny_hdriCapeHill_static`   | Bunny static                      | Cape Hill HDRI light intensity = 2  | White    | Position: `[0, 0, 0]`
+27      | `bunny_hdriHansaplatz_static` | Bunny static                      | Hansaplatz HDRI light intensity = 1 | White    | Position: `[0, 0, 0]`
+28      | `sphere_3Lights_moveDiag`     | Sphere moves diagonally           | Light rig                           | White    | Position: `[0, sin($F), sin($F)]`
+29      | `rubbertoy_3Lights_rotateUp`  | Rubbertoy rotates along up vector | Light rig                           | White    | Position: `[0, 0, 0]`; Rotation: `[0, $F, 0]`
+30      | `box_3Lights_rotateXYZ`       | Box rotates all 3 directions      | Light rig                           | White    | Position: `[0, 0, 0]`; Rotation: `[$F, $F, $F]`
 
 **Table 3**. Scenes with *Rasterized* buffer. If not listed, all the other
 buffer types are still included with the scene.
