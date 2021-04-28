@@ -105,8 +105,12 @@ GuideColored                                                                    
 :-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :--------:
 <img src="images/dataset/bunny_GuideColored_2.png" alt="bunny_2_guides" width = "128"/> | <img src="images/dataset/bunny_LitPrimitive_2.png" alt="bunny_2_lit_primitive" width = "128"/> | <img src="images/dataset/bunny_SceneDepth_2.png" alt="bunny_2_scene_depth" width = "128"/> | <img src="images/dataset/bunny_WorldNormal_2.png" alt="bunny_2_world_normal" width = "128"/> | <img src="images/dataset/bunny_Mask_2.png" alt="bunny_2_mask" width = "128"/> | <img src="images/dataset/bunny_Rasterized_2.png" alt="bunny_2_rasterized" width = "128"/>
 
-**Note**: The *Mask* buffer can be used for sampling specific regions of
-interest if trained the images as crops. We also find that the *Rasterized*
+**Note**: 
+
+- The *GuideColored* buffer has random colors for white fur scenes, and brown color for brown fur scenes.
+- The *Mask* buffer can be used for sampling specific regions of
+interest if trained the images as crops. 
+- We find that the *Rasterized*
 buffer type takes too long and costly to generate and does not fit our
 description of inexpensive inputs, therefore excluding it during training.
 
@@ -263,8 +267,9 @@ The dataset includes two fur types:
 The fur is procedurally generated and evenly distributed on the surface of the
 skin primitive.
 
-*   Guide curve: These are simple curves (see GuideColored buffer) used to
-    generate additional hair strands. They compose of line segments.
+*   Guide curve: These are simple line segmnets of curves (see GuideColored buffer) used to
+    generate additional hair strands. The white fur has randome guide colors, and the brown fur 
+    has brown guide color.
 *   Segments / guide curve: 8
 *   Hair strands: These are line segments that together create the groom assets.
     These are what we exported in the Alembic files.
