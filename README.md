@@ -71,6 +71,7 @@ files generated from scratch using Houdini and Zync.
     <img src="images/dataset/bunny_GuideColored_1.png" alt="bunny_LitPrimitive_1" width = "128"/>
     <img src="images/dataset/bunny_LitPrimitve_1.png" alt="bunny_LitPrimitive_1" width = "128"/>
     <img src="images/dataset/bunny_SceneDepth_1.png" alt="bunny_SceneDepth_1" width = "128"/>
+    <img src="images/dataset/bunny_WorldNormal_1.png" alt="bunny_SceneDepth_1" width = "128"/>
 </p>
 
 The dataset has the following definitions:
