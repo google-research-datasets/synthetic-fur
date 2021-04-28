@@ -1,6 +1,6 @@
 # SyntheticFur Dataset
 
-[Paper]() [Video](https://youtu.be/FNOddH3DXUk)
+[Paper]()
 
 ## Overview
 
@@ -16,9 +16,15 @@ raytraced fur renders. We believe that this dataset can contribute to the
 computer graphics and machine learning community to develop more advanced
 techniques with fur rendering.
 
+For a quick overview of the dataset, see the galleries of images contained within the dataset:
+
+- [Sphere](https://photos.app.goo.gl/JcRmKfjjqb7Kuwdz5)
+- [Torus]([https://photos.app.goo.gl/FJD3dC9RTt8jcBGg8)
+- [Bunny](https://photos.app.goo.gl/3CkwRjWtZzpp5FTL7)
+
 ## Download
 
-The dataset is hosted on Google Cloud. It's available for both browsing (Google
+The dataset is hosted on Google Cloud Storage. It's available for both [browsing](https://pantheon.corp.google.com/storage/browser/magentadata/datasets/synthetic_fur/release?project=brain-magenta) (Google
 account required) and download. The dataset are divded into images (~21.01 GiB,
 with 18GB of training and 3GB of holdout set), and simulation files.
 
@@ -35,26 +41,39 @@ To download the dataset, we recommend using the
 command:
 
 ```
-gsutil -m cp -r gs://path/to/dataset/release/images .
+gsutil -m cp -r gs://magentadata/datasets/synthetic_fur/release/images .
 ```
 
 will copy only the images in the dataset.
 
 ## What's in this?
 
-<img src="images/dataset/sphere_hdri_capehill.png" alt="sphere_hdri_capehill" width = "64"/>
-<img src="images/dataset/sphere_hdri_malibu.png" alt="sphere_hdri_malibu" width = "64"/>
-<img src="images/dataset/bunny_1.png" alt="bunny_1" width = "64"/>
-<img src="images/dataset/bunny_3.png" alt="bunny_3" width = "64"/>
-<img src="images/dataset/torus_3.png" alt="torus_3" width = "64"/>
-<img src="images/dataset/tube_2.png" alt="tube_2" width = "64"/>
+[<img src="images/dataset/bunny_gt.gif" alt="bunny_1" width = "512"/>](https://youtu.be/FNOddH3DXUk)
 
 [Video](https://youtu.be/FNOddH3DXUk) showing all the ground truth frames of
 every scene.
 
 The dataset contains ~140,000 images and 15 [Alembic]((https://www.alembic.io/)
-files generated from scratch using Houdini and Zync. The dataset has the
-following definitions:
+files generated from scratch using Houdini and Zync.
+
+<p float="left">
+    <img src="images/dataset/sphere_3.png" alt="sphere_1" width = "128"/>
+    <img src="images/dataset/sphere_hdri_capehill.png" alt="sphere_hdri_capehill" width = "128"/>
+    <img src="images/dataset/sphere_brown_1.png" alt="sphere_brown_1" width = "128"/>
+    <img src="images/dataset/tube_2.png" alt="tube_2" width = "128"/>
+    <img src="images/dataset/torus_2.png" alt="torus_2" width = "128"/>
+    <img src="images/dataset/torus_3.png" alt="torus_3" width = "128"/>
+    <img src="images/dataset/torus_brown_1.png" alt="torus_brown_1" width = "128"/>
+    <img src="images/dataset/bunny_brown_1.png" alt="bunny_brown_1" width = "128"/>
+    <img src="images/dataset/bunny_1.png" alt="bunny_1" width = "128"/>
+    <img src="images/dataset/bunny_GuideColored_1.png" alt="bunny_LitPrimitive_1" width = "128"/>
+    <img src="images/dataset/bunny_LitPrimitve_1.png" alt="bunny_LitPrimitive_1" width = "128"/>
+    <img src="images/dataset/bunny_Rasterized_1.png" alt="bunny_Rasterized_1" width = "128"/>
+    <img src="images/dataset/bunny_SceneDepth_1.png" alt="bunny_SceneDepth_1" width = "128"/>
+    <img src="images/dataset/bunny_WorldNormal_1.png" alt="bunny_WorldNormal_1" width = "128"/>
+</p>
+
+The dataset has the following definitions:
 
 -   *Scene*: a sequence of frames that together represents a continuous motion
     of fur. Each scene contains frames of images and optionally 1 corresponding
@@ -77,18 +96,18 @@ following definitions:
 
 ##### Example
 
-HighQualityRender (ground truth)                                      |
-:-------------------------------------------------------------------: |
-<img src="images/dataset/bunny_2.png" alt="bunny_2_gt" width = "64"/> |
+HighQualityRender (ground truth)                                       |
+:--------------------------------------------------------------------: |
+<img src="images/dataset/bunny_2.png" alt="bunny_2_gt" width = "128"/> |
 
-GuideColored                                                                           | LitPrimitive                                                                                  | SceneDepth
-:------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: | :--------:
-<img src="images/dataset/bunny_GuideColored_2.png" alt="bunny_2_guides" width = "64"/> | <img src="images/dataset/bunny_LitPrimitive_2.png" alt="bunny_2_lit_primitive" width = "64"/> | <img src="images/dataset/bunny_SceneDepth_2.png" alt="bunny_2_scene_depth" width = "64"/>
+GuideColored                                                                            | LitPrimitive                                                                                   | SceneDepth                                                                                 | WorldNormal                                                                                  | Mask                                                                          | Rasterized
+:-------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------: | :--------:
+<img src="images/dataset/bunny_GuideColored_2.png" alt="bunny_2_guides" width = "128"/> | <img src="images/dataset/bunny_LitPrimitive_2.png" alt="bunny_2_lit_primitive" width = "128"/> | <img src="images/dataset/bunny_SceneDepth_2.png" alt="bunny_2_scene_depth" width = "128"/> | <img src="images/dataset/bunny_WorldNormal_2.png" alt="bunny_2_world_normal" width = "128"/> | <img src="images/dataset/bunny_Mask_2.png" alt="bunny_2_mask" width = "128"/> | <img src="images/dataset/bunny_Rasterized_2.png" alt="bunny_2_rasterized" width = "128"/>
 
-WorldNormal                                                                                 | Mask                                                                                                 | Rasterized
-:-----------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------: | :--------:
-<img src="images/dataset/bunny_WorldNormal_2.png" alt="bunny_2_world_normal" width = "64"/> | !<img src="images/dataset/bunny_Mask_2.png" alt="bunny_2_mask" width = "64"/>                        | !<img src="images/dataset/bunny_Rasterized_2.png" alt="bunny_2_rasterized" width = "64"/>
-                                                                                            | The Mask buffer can be used for sampling specific regions of interest if trained the images as crops | We find that the rasterized buffer type takes too long and costly to generate and does not fit our description of inexpensive inputs, therefore excluding it during training.
+**Note**: The *Mask* buffer can be used for sampling specific regions of
+interest if trained the images as crops. We also find that the *Rasterized*
+buffer type takes too long and costly to generate and does not fit our
+description of inexpensive inputs, therefore excluding it during training.
 
 #### Simulations
 
@@ -281,11 +300,14 @@ Scene # | Scene Name                                                | Short Desc
 19      | `tube_3Lights_rotateRight`                                | Tube rotates along right vector                                   | Light rig                                         | White    | Position: `[0, 0, 0]`; Rotation: `[0, 0, $F]`
 20      | `bunny_3Lights_static`                                    | Bunny static                                                      | Light rig                                         | White    | Position: `[0, 0, 0]`
 21      | `bunny_3Lights_rotateUp`                                  | Bunny rotates along up vector                                     | Light rig                                         | White    | Position: `[0, 0, 0]`; Rotation: `[0, $F, 0]`
-22      | `sphere_curly_clumpLarge_brown_3Lights_moveRL`            | Sphere moves right, left                                          | Light rig                                         | Brown    | Position: `[0, 0, sin($F)]`
+22      | `sphere_curly_clumpLarge_brown_3Lights_moveRL`            | (\*) Sphere moves right, left                                     | Light rig                                         | Brown    | Position: `[0, 0, sin($F)]`
 23      | `torus_curly_clumpLarge_brown_3Lights_static60`           | Torus static, tilted at 60 degree angle                           | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[0, 0, 60]`
 24      | `torus_curly_clumpLarge_brown_3Lights_rotateUp`           | Torus rotates along up vector                                     | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F, 0, 90]`; Uniform Scale: `0.5`
 25      | `torus_curly_clumpLarge_brown_3Lights_rotateRightForward` | Torus rotate along right and forward vectors                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F/3, 0, $F]`; Uniform Scale: `0.5`
 26      | `bunny_curly_clumpLarge_brown_3Lights_static`             | Bunny static                                                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`
+
+(\* 4/27/2021): we recently discovered an issue from frame 410-720 that contains
+unstable simulation of fur. We advise avoiding using those frames.
 
 **Table 2**. Scenes with no ground truths
 
@@ -362,6 +384,5 @@ Box                        | 7818           | 600462
 ## Citation
 
 > @article{uid, title = {SyntheticFur dataset for neural rendering}, author =
-> {Trung Tuan Le and Andeep Singh Toor and Fred Bertsch and Ryan Poplin and Maggie Oh},
-> journal = {Arxiv} }
-
+> {Trung Tuan Le and Andeep Singh Toor and Fred Bertsch and Ryan Poplin and
+> Maggie Oh}, journal = {Arxiv} }
