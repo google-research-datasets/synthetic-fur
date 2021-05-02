@@ -11,9 +11,6 @@ more information about Houdini Grooming, you can also look at the
 [Introduction to Grooming in Houdini](https://www.sidefx.com/tutorials/introduction-to-grooming-in-houdini/)
 by Gabriela Salmeron.
 
-You can download the [**Example Houdini file**]() for reference of our setup.
-This is the simplified version of the scenes we used to create our dataset.
-
 ### Basic scene
 
 Our scene set up contains a camera, a light rig, the groomed skin primitive, and
