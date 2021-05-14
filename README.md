@@ -1,11 +1,9 @@
-## SyntheticFur Dataset
+## SyntheticFur Dataset Description
 
-[Paper]()
+- **Paper**: https://arxiv.org/abs/2105.06409
+- **Video**: https://youtu.be/5uraQu_5Tyg
 
 [<img src="images/dataset/bunny_gt.gif" alt="bunny_1" width = "512"/>](https://youtu.be/FNOddH3DXUk)
-
-[Video](https://youtu.be/5uraQu_5Tyg) showing all the ground truth frames of
-every scene.
 
 ## Overview
 
@@ -140,6 +138,12 @@ See [here](docs/houdini_scene_setup_guide.md).
 
 ## Citation
 
-> @article{uid, title = {SyntheticFur dataset for neural rendering}, author =
-> {Trung Tuan Le and Andeep Singh Toor and Fred Bertsch and Ryan Poplin and
-> Maggie Oh}, journal = {Arxiv} }
+
+> @misc{le2021syntheticfur,
+>      title={SyntheticFur dataset for neural rendering}, 
+>      author={Trung Le and Ryan Poplin and Fred Bertsch and Andeep Singh Toor and Margaret L. Oh},
+>      year={2021},
+>      eprint={2105.06409},
+>      archivePrefix={arXiv},
+>      primaryClass={cs.LG}
+> }
