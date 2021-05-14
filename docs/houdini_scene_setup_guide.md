@@ -1,5 +1,7 @@
 ## Houdini Scene Setup Guide
 
+[**EXAMPLE HOUDINI FILE**](../houdini_files/example.hip) for reference.
+
 If you're interested in creating a new Houdini scene to generate your own
 dataset, or new unseen inputs for evaluating your model, you can follow this
 guide. These aren't strict instructions, so please free make neccessary
@@ -10,8 +12,6 @@ SideFX [Learning Houdini](https://www.sidefx.com/learn/getting_started/). For
 more information about Houdini Grooming, you can also look at the
 [Introduction to Grooming in Houdini](https://www.sidefx.com/tutorials/introduction-to-grooming-in-houdini/)
 by Gabriela Salmeron.
-
-We also provide an [example Houdini file](../houdini_files/example.hip) for reference.
 
 ### Basic scene
 
