@@ -19,13 +19,6 @@ raytraced fur renders. We believe that this dataset can contribute to the
 computer graphics and machine learning community to develop more advanced
 techniques with fur rendering.
 
-For a quick overview of the dataset, see the galleries of images contained
-within the dataset:
-
--   [Sphere](https://photos.app.goo.gl/JcRmKfjjqb7Kuwdz5)
--   [Torus](https://photos.app.goo.gl/FJD3dC9RTt8jcBGg8)
--   [Bunny](https://photos.app.goo.gl/3CkwRjWtZzpp5FTL7)
-
 ## Download
 
 The dataset is hosted on Google Cloud Storage. It's available for both
