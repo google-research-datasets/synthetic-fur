@@ -21,8 +21,7 @@ techniques with fur rendering.
 
 ## Download
 
-The dataset are divded into png images (~21.01 GiB, with 18GB of training and 3GB of holdout set), 
-and Alembi simulation files (> 1TB).
+The dataset are divded into png images (~20GB), and Alembi simulation files (> 1TB).
 
 We recommend to download the images separately from the Alembic simulation files since they can take up a lot of your local storage. 
 The simulation files are entirely optional, and only needed if you want to experiment on building a neural physics model.
