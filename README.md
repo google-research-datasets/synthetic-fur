@@ -21,30 +21,13 @@ techniques with fur rendering.
 
 ## Download
 
-The dataset is hosted on Google Cloud Storage. It's available for both
-[browsing](https://pantheon.corp.google.com/storage/browser/magentadata/datasets/synthetic_fur/release?project=brain-magenta)
-(Google account required) and download. The dataset are divded into images
-(~21.01 GiB, with 18GB of training and 3GB of holdout set), and simulation
-files.
+The dataset are divded into png images (~21.01 GiB, with 18GB of training and 3GB of holdout set), 
+and Alembi simulation files (> 1TB).
 
-We recommend to download the images separately from the simulation files. To get
-started, you can download a subset of scenes instead, such as scene 1 - 4, so
-you can test out your pipeline. The simulation files are entirely optional, and
-only needed if you want to experiment on building a neural physics model. These
-simulation files can be rather large, so make sure you have enough space on your
-drive.
+We recommend to download the images separately from the Alembic simulation files since they can take up a lot of your local storage. 
+The simulation files are entirely optional, and only needed if you want to experiment on building a neural physics model.
 
-To download the dataset, we recommend using the
-[gsutil tool](https://cloud.google.com/storage/docs/gsutil) included in the
-[Google Cloud SDK](https://cloud.google.com/sdk/docs/). For example, the
-command:
-
-```
-gsutil -m cp -r gs://magentadata/datasets/synthetic_fur/release/images .
-```
-
-will copy only the images in the dataset. Alternatively, individual zip files
-containing portions of the dataset can be separately downloaded:
+Individual zip files containing portions of the dataset can be separately downloaded:
 
 * [All images](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/synthetic_fur_images.zip)
 * [Alembic files
