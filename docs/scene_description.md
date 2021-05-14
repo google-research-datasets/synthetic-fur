@@ -1,13 +1,16 @@
 ## Scene Description
 
-**Note**: The syntax `$F` means frame count.
+**Notes**:
 
-Use the section [Scene parameters](#scene-parameters) below if you need to look up specific description for a
-particular setting, such as lighting or fur type.
+- You can refer to this [video with timestamps](https://youtu.be/5uraQu_5Tyg) to preview the scenes.
+- Several tables below summarizes what are inccluded per scene.
+- Use section [Scene Parameters](#scene-parameters) below for reference on camera, skin geometries, lighting, and groom assets. 
+- The syntax `$F` means frame count.
 
-**Table 1**. Scenes with ground truths
+---
+### **Table 1**. Scenes with ground truths
 
-Scene # | Scene Name                                                | Short Description                                                 | Light Type                                        | Fur Type | Skin Primitive Motion
+ \# | Scene Name                                                | Short Description                                                 | Light Type                                        | Fur Type | Skin Primitive Motion
 :------ | :-------------------------------------------------------- | :---------------------------------------------------------------: | :-----------------------------------------------: | :------: | :-------------------:
 1       | `sphere_3Lights_static`                                   | Sphere static                                                     | Light rig                                         | White    | Position: `[0, 0, 0]`
 2       | `sphere_keyLight_static`                                  | Sphere static                                                     | Key                                               | White    | Position: `[0, 0, 0]`
@@ -35,10 +38,9 @@ Scene # | Scene Name                                                | Short Desc
 24      | `torus_curly_clumpLarge_brown_3Lights_rotateRightForward` | Torus rotate along right and forward vectors                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`; Rotation: `[$F/3, 0, $F]`; Uniform Scale: `0.5`
 25      | `bunny_curly_clumpLarge_brown_3Lights_static`             | Bunny static                                                      | Light rig                                         | Brown    | Position: `[0, 0, 0]`
 
-(\* 4/27/2021): we recently discovered an issue from frame 410-720 that contains
-unstable simulation of fur. We advise avoiding using those frames.
+---
 
-**Table 2**. Scenes with no ground truths
+### **Table 2**. Scenes with no ground truths
 
 Scene # | Scene Name                    | Short Description                 | Light Type                          | Fur Type | Skin Primitive Motion
 :------ | :---------------------------- | :-------------------------------: | :---------------------------------: | :------: | :-------------------:
@@ -48,8 +50,11 @@ Scene # | Scene Name                    | Short Description                 | Li
 29      | `rubbertoy_3Lights_rotateUp`  | Rubbertoy rotates along up vector | Light rig                           | White    | Position: `[0, 0, 0]`; Rotation: `[0, $F, 0]`
 30      | `box_3Lights_rotateXYZ`       | Box rotates all 3 directions      | Light rig                           | White    | Position: `[0, 0, 0]`; Rotation: `[$F, $F, $F]`
 
-**Table 3**. Scenes with *Rasterized* buffer. If not listed, all the other
-buffer types are still included with the scene.
+---
+
+### **Table 3**. Scenes with *Rasterized* buffer. 
+
+\*If not listed, all the other buffer types are still included with the scene.
 
 Scene # | Scene Name
 :------ | :---------------------------------
@@ -69,10 +74,11 @@ Scene # | Scene Name
 20      | `bunny_3Lights_static`
 21      | `bunny_3Lights_rotateUp`
 
-**Table 4**. Scenes with Alembic simulation files.
+---
 
-**Note**: *Since nothing changes with static scenes, the Alembic files for those
-scenes only contain 1 frame.*
+### **Table 4**. Scenes with Alembic simulation files.
+
+\*Static scenes contain only 1 frame, to reduce the memory size of the Alembic file.
 
 Scene # | Scene Name                              | Alembic file
 :------ | :-------------------------------------- | :-----------
@@ -98,7 +104,9 @@ Scene # | Scene Name                              | Alembic file
 20      | `bunny_3Lights_static`                  | `bunny_static_one_frame.abc`
 21      | `bunny_3Lights_rotateUp`                | `bunny_rotateUp.abc`
 
-**Table 5**. Fur attributes for some select scenes for reference.
+---
+
+### **Table 5**. Fur attributes for some select scenes for reference.
 
 Skin Primitive             | # Guide Curves | # Generated Hair Strands
 -------------------------- | :------------: | :----------------------:
@@ -110,10 +118,11 @@ Stanford Bunny             | 19121          | 1469444
 Rubber Toy                 | 10361          | 802088
 Box                        | 7818           | 600462
 
+---
 
 ## Scene Parameters
 
-#### Perspective Camera
+### Perspective Camera
 
 *   Position: [-5, 0, 0]
 *   Rotation: [0, -90, 0]
@@ -125,7 +134,7 @@ Box                        | 7818           | 600462
 *   Near clipping: 0.01
 *   Far clipping: 20000
 
-#### Light Rig
+### Light Rig
 
 The light rig contains 3 lights that are parented by a common root node. This
 allows the light rig to be rotated at once by updating the root node’s
@@ -159,7 +168,7 @@ orientation per frame.
     *   Exposure: -0.28
     *   Position: [-5.1, 2.8, 4.8]
 
-#### Grid light
+### Grid light
 
 This is used only for scene 9: sphere\_3Lights\_sbPlateRL\_static and scene 10:
 sphere\_3Lights\_sbPlateRotateUp\_static.
@@ -172,7 +181,7 @@ sphere\_3Lights\_sbPlateRotateUp\_static.
 *   Intensity in scene 9: 100
 *   Intensity in scene 10: 50
 
-#### HDRI Environment Light
+### HDRI Environment Light
 
 *Used in scene 5, 6, 7, 8.*
 
@@ -187,12 +196,12 @@ sphere\_3Lights\_sbPlateRotateUp\_static.
 *   HDRI image in scene 8:
     [Hansaplatz](https://hdrihaven.com/hdri/?h=hansaplatz)
 
-#### Background
+### Background
 
 A 1x1 grid primitive, size 125x125, placed about 62.5 units behind the skin
 primitive.
 
-#### Shadow Blockers
+### Shadow Blockers
 
 *Used in scene 9 and 10.*
 
@@ -207,54 +216,54 @@ primitive.
     *   Position: [0, 1, 0]
     *   Rotation: [0, $F, 0]
 
-#### Geometry properties
+### Geometry properties
 
 The following geometries are used as skin primitive to groom the fur on:
 
-<span style="text-decoration:underline;">Sphere</span>
+**Sphere**
 
 *   Radius: 0.5
 
-<span style="text-decoration:underline;">Torus</span>
+**Torus**
 
 *   Radiusx: 1
 *   Radiusx: 0.5
 
-<span style="text-decoration:underline;">Tube</span>
+**Tube**
 
 *   Radius 1 (top): 0.3
 *   Radius 2 (bottom): 0.5
 *   Height: 2.33
 
-<span style="text-decoration:underline;">Stanford Bunny</span>
+**Stanford Bunny**
 
 *   This is the Stanford Bunny model from
     [here](https://graphics.stanford.edu/software/scanview/models/bunny.html).
 
-<span style="text-decoration:underline;">Rubbertoy</span>
+**Rubbertoy**
 
 *   This is a test model provided by default with Houdini.
 
-<span style="text-decoration:underline;">Box</span>
+**Box**
 
 *   Size: [1, 1, 1]
 
-#### Fur Types
+### Fur Types
 
 The dataset includes two fur types:
 
-*   White fur: small clumps, straight, white, more transparent
-*   Brown fur: large clumps, curly, brown, less transparent
+*   **White fur**: small clumps, straight, white, more transparent
+*   **Brown fur**: large clumps, curly, brown, less transparent
 
 The fur is procedurally generated and evenly distributed on the surface of the
 skin primitive.
 
-*   Guide curve: These are simple line segmnets of curves (see GuideColored buffer) used to
+*   **Guide curve**: These are simple line segmnets of curves (see GuideColored buffer) used to
     generate additional hair strands. The white fur has randome guide colors, and the brown fur 
     has brown guide color.
-*   Segments / guide curve: 8
-*   Hair strands: These are line segments that together create the groom assets.
+*   **Segments / guide curve**: 8
+*   **Hair strands**: These are line segments that together create the groom assets.
     These are what we exported in the Alembic files.
-*   Segments / hair strand: 8
-*   Gravity and External Forces: None
+*   **Segments / hair strand**: 8
+*   **Gravity and External Forces**: None
 
