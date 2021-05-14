@@ -54,7 +54,7 @@ will copy only the images in the dataset.
 
 ## What's in this?
 
-The dataset contains ~140,000 images and 15 [Alembic]((https://www.alembic.io/)
+The dataset contains ~140,000 images and 15 [Alembic](https://www.alembic.io/)
 files generated from scratch using Houdini and Zync.
 
 <p float="left">
@@ -114,9 +114,8 @@ description of inexpensive inputs, therefore excluding it during training.
 
 #### Simulations
 
-The Alembic files capture the fur strand positions per frame. Alembic is an open
-computer graphics interchange framework. The Alembic format is described
-[here](https://www.alembic.io/).
+[Alembic](https://www.alembic.io/) is an open
+computer graphics interchange framework. The Alembic files capture the fur strand positions per frame. 
 
 A groom consists of hair strands. Each hair strand is a series of connected line
 segments. The following information can be extracted from the Alembic files:
