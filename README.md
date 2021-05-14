@@ -46,13 +46,13 @@ gsutil -m cp -r gs://magentadata/datasets/synthetic_fur/release/images .
 will copy only the images in the dataset. Alternatively, individual zip files
 containing portions of the dataset can be separately downloaded:
 
-* [images](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/synthetic_fur_images.zip)
+* [All images](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/synthetic_fur_images.zip)
 * [Alembic files
   (bunny)](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_bunny.zip)
 * [Alembic files (rubbertoy)](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_rubbertoy.zip)
-* [Alembic files (sphere))](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_sphere.zip)
-* [Alembic files (torus))](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_torus.zip)
-* [Alembic files (tube))](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_tube.zip)
+* [Alembic files (sphere)](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_sphere.zip)
+* [Alembic files (torus)](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_torus.zip)
+* [Alembic files (tube)](https://storage.googleapis.com/magentadata/datasets/synthetic_fur/sim/synthetic_fur_tube.zip)
 
 ## What's in this?
 
